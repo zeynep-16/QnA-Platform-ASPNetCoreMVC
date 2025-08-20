@@ -22,7 +22,7 @@ Admin paneli aracılığıyla tüm içerikler yönetilebilir.
 
 - **ASP.NET Core MVC**
 - **Entity Framework Core** (Code First & Migrations)
-- **MSSQL Server**
+- **Microsoft SQL Server (Docker üzerinde)**
 - **Custom Middleware** (özelleştirilmiş işlemler için)
 
 ---
