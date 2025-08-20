@@ -1,0 +1,35 @@
+# Build folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# Rider / IntelliJ
+.idea/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Environment files
+.env
+*.env
+
+# Publish output
+wwwroot/lib/
+
+# Node.js (if frontend has npm/yarn)
+node_modules/
+dist/
+
+# Others
+Thumbs.db
