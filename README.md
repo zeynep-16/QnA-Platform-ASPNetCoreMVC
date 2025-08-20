@@ -31,19 +31,22 @@ Admin paneli aracılığıyla tüm içerikler yönetilebilir.
 
 Aşağıda uygulamaya ait bazı ekran görüntüleri yer almaktadır:
 
-### Giriş & Kayıt Sayfaları
+### Ana Sayfa & Hakkında Sayfası
 ![Login](./images/mvc1.png)
 ![Register](./images/mvc2.png)
 
-### Soru Listesi & Detaylar
+### Projeler Sayfası
 ![Soru Listesi](./images/mvc3.png)
+
+### İletişim
 ![Soru Detay](./images/mvc4.png)
 
 ### Soru Sorma & Cevaplama
 ![Soru Sorma](./images/mvc5.png)
-![Cevaplama](./images/mvc6.png)
-
-### Admin Paneli
 ![Admin Panel](./images/mvc7.png)
+
+
+### Giriş 
+![Cevaplama](./images/mvc6.png)
 
 ---
