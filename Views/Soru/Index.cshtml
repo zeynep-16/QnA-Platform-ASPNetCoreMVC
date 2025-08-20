@@ -1,0 +1,53 @@
+@model IEnumerable<Entities.Soru>
+
+@{
+    ViewData["Title"] = "Tüm Sorular";
+}
+
+<h2 class="mt-4">Sorular Listesi</h2>
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>İçerik</th>
+            <th>Tarih</th>
+            <th>Kullanıcı</th>
+            <th>Cevap</th>
+            @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+            {
+                <th>İşlem</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var soru in Model)
+        {
+            <tr>
+                <td>@soru.Icerik</td>
+                <td>@soru.Tarih.ToShortDateString()</td>
+                <td>@(soru.Kullanici?.KullaniciAdi ?? "anonim")</td>
+                <td>
+                    @if (string.IsNullOrEmpty(soru.Cevap))
+                    {
+                        <em>Henüz cevaplanmadı</em>
+                    }
+                    else
+                    {
+                        @soru.Cevap
+                    }
+                </td>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+                {
+                    <td>
+                        <a asp-controller="Soru" asp-action="Cevapla" asp-route-id="@soru.Id" class="btn btn-sm btn-warning">Cevapla</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <a asp-controller="Soru" asp-action="Create" class="btn btn-primary mt-3">Yeni Soru Sor</a>
+}

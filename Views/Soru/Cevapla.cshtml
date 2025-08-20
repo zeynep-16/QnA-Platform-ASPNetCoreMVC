@@ -1,0 +1,22 @@
+@model Entities.Soru
+
+@{
+    ViewData["Title"] = "Soruyu Cevapla";
+}
+
+<h2>Soruyu Cevapla</h2>
+
+<div class="mb-3">
+    <strong>Soru:</strong>
+    <p>@Model.Icerik</p>
+</div>
+
+<form asp-action="Cevapla" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <div class="mb-3">
+        <label for="cevap" class="form-label">Cevabınız:</label>
+        <textarea name="cevap" class="form-control" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Cevabı Kaydet</button>
+    <a asp-controller="Soru" asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</form>

@@ -1,0 +1,21 @@
+@model Entities.Soru
+
+@{
+    ViewData["Title"] = "Yeni Soru Sor";
+}
+
+<h2>Yeni Soru Sor</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Icerik" class="form-label">Soru İçeriği</label>
+        <textarea asp-for="Icerik" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Icerik" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Gönder</button>
+    <a asp-controller="Soru" asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
